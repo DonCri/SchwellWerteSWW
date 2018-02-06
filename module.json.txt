@@ -1,0 +1,11 @@
+{
+    "id": "{pm1SQbpZ-Umz20Gh83L8_w}",
+    "name": "SchwellWerteSonne",
+    "type": 3,
+    "vendor": "BRELAG",
+
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "SwS"
+}
