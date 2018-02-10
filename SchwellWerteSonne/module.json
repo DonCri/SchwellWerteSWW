@@ -3,7 +3,10 @@
     "name": "SchwellWerteSonneSoll",
     "type": 3,
     "vendor": "BRELAG",
-
+    "aliases":
+        [
+            "SchwellWerteSonneSoll"
+        ],
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
