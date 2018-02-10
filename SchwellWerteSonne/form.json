@@ -1,8 +1,8 @@
 {
     "elements":
     [
-        { "type": "SelectVariable", "name": "LightValue", "caption": "Lichtsensor" }
-        { "type": "SelectVariable", "name": "upperValue", "caption": "oberer Schwellwert" }
-        { "type": "SelectVariable", "name": "lowerValue", "caption": "unterer Schwellwert" }
+        { "type": "SelectVariable", "name": "LightValue", "caption": "Lichtsensor" },
+        { "type": "SelectVariable", "name": "upperValue", "caption": "oberer Schwellwert" },
+        { "type": "SelectVariable", "name": "lowerValue", "caption": "unterer Schwellwert" },
     ]
 }
