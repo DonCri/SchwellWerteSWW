@@ -23,7 +23,7 @@
         $this->RegisterScript("Skript", "Befehle");
       }
 
-      public function ApplyChanges() {
+      public function RequestAction() {
 
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
