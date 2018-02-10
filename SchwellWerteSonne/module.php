@@ -13,7 +13,8 @@
         public function Create() {
         // Diese Zeile nicht löschen.
         parent::Create();
-
+        
+        $this->RegisterPropertyInteger("osw", 0);
 
         $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
         $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
@@ -25,12 +26,10 @@
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
 
-    if($this->ReadPropertyInteger("osw") == 10) {
+    if($this->ReadPropertyInteger("osw") == ) {
         RunScript($script);
     }
-
-
-}
+    }
 
     }
 
