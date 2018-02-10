@@ -19,7 +19,7 @@
         $this->RegisterScript("oswScript", "Oberer SchwellWert", "<?  ?>");
 
         if("osw" == 10) {
-          IPS_RunScript("oswScript");
+          exec("oswScript");
         }
 
         }
