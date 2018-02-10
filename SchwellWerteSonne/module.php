@@ -18,10 +18,10 @@
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
         $this->RegisterScript("oswScript", "Oberer SchwellWert", "<?  ?>");
 
-        $SchwelleOben = "osw";
+        $SchwelleOben = GetValue($this->GetIDForIdent("osw"));
 
         if($SchwelleOben == 10) {
-          IPS_RunScript("Oberer SchwellWert");
+          IPS_RunScript($this->GetIDForIdent("oswScript"));
         }
 
         }
