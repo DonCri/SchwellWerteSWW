@@ -20,13 +20,15 @@
 
         $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
         $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
-        $script = $this->RegisterScript("Skript", "Befehle");
+        $this->RegisterScript("Skript", "Befehle");
       }
 
       public function ApplyChanges() {
 
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
+
+    $script = GetValue($this->ReadPropertyInteger("LightValue"));
 
     if($this->ReadPropertyInteger("LightValue") == $this->ReadPropertyInteger("upperValue")) {
         IPS_RunScript($script);
