@@ -16,6 +16,7 @@
 
         $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
+        $this->RegisterScript("TextSkript", "Mein TestSkript", "<? Test ?>");
 
         }
 
