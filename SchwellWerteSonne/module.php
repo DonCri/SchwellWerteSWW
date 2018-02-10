@@ -14,7 +14,8 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableInteger("Status", "Test");
+        $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
+        $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
 
         }
 
