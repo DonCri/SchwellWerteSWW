@@ -8,8 +8,14 @@
         * ABC_MeineErsteEigeneFunktion($id);
         *
         */
-        public function SchwellWerteSonneSoll() {
-            echo "Hallo Welt";
+        public function Create() {
+          parent::Create();
+
+// Modul-Eigenschaftserstellung
+$this->RegisterPropertyString("Benutzername", "MaxMustermann");
+$this->RegisterPropertyInteger("Zahl", 123);
+$this->RegisterPropertyFloat("Faktor", 0.5);
+$this->RegisterPropertyBoolean("Geöffnet", true);
         }
     }
 ?>
