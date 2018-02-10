@@ -19,7 +19,7 @@
 
         $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
-        
+      }
 
     }
 
