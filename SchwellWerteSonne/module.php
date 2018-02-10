@@ -16,10 +16,10 @@
 
         $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
-        $this->RegisterScript("oswScript", "Oberer SchwellWert", "<? Test ?>");
+        $this->RegisterScript("oswScript", "Oberer SchwellWert", "<?  ?>");
 
         if("osw" == 10) {
-          echo "Hallo Welt";
+          IPS_RunScript("oswScript");
         }
 
         }
