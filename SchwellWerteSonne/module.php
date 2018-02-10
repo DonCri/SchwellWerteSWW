@@ -14,7 +14,7 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterPropertyInteger("osw", 0);
+        $this->RegisterPropertyInteger("LightValue", 0);
 
         $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
         $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
