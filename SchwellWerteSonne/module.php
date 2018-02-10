@@ -15,6 +15,8 @@
         parent::Create();
 
         $this->RegisterPropertyInteger("LightValue", 0);
+        $this->RegisterPropertyInteger("upperValue", 0);
+        $this->RegisterPropertyInteger("lowerValue", 0);
 
         $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
         $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
