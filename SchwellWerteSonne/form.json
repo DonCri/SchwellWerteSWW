@@ -1,0 +1,14 @@
+{
+    "elements":
+    [
+        { "type": "SelectInstance", "name": "osw", "caption": "Target" }
+    ],
+    "actions":
+    [
+        ... //Hier Formularfelder einfügen
+    ],
+    "status":
+    [
+        ... //Hier Statusmeldungen einfügen
+    ]
+}
