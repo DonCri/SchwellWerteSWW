@@ -28,7 +28,7 @@
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
 
-    if($this->ReadPropertyInteger("LightValue") == 10 ) {
+    if($this->ReadPropertyInteger("LightValue") == $this->ReadPropertyInteger("upperValue")) {
         RunScript($script);
     }
     }
