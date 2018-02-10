@@ -1,6 +1,6 @@
 {
     "elements":
     [
-        { "type": "SelectInstance", "name": "osw", "caption": "Lichtsensor" }
+        { "type": "SelectVariable", "name": "osw", "caption": "Lichtsensor" }
     ]
 }
