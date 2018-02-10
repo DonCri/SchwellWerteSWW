@@ -18,6 +18,7 @@
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
         $this->RegisterScript("oswScript", "Oberer SchwellWert", "<? Test ?>");
 
+        $osw = GetValue(osw)
         if ($osw == 10) {
           echo "Hallo Welt";
         }
