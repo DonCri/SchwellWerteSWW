@@ -18,7 +18,7 @@
 
         }
 
-        public function MeineErsteEigeneFunktion() {
+        public function SchwellWerteSonneSoll() {
             echo "Halle Welt";
         }
     }
