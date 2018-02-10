@@ -23,16 +23,14 @@
         $this->RegisterScript("Skript", "Befehle");
       }
 
-      public function RequestAction() {
+      public function RequestAction($Ident, $Value) {
 
-    // Diese Zeile nicht löschen
-    parent::ApplyChanges();
+        if($this->ReadPropertyInteger("LightValue") == $this->GetIDForIdent("VarOSW")) {
+            IPS_RunScript($this->GetIDForIdent("Skript"));
+          }
+          }
 
-
-    if($this->ReadPropertyInteger("LightValue") == $this->GetIDForIdent("VarOSW")) {
-        IPS_RunScript($this->GetIDForIdent("Skript"));
-    }
-    }
+      }
 
     }
 
