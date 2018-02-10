@@ -9,7 +9,7 @@
         *
         */
         public function SchwellWerteSonneSoll() {
-            echo $this->InstanceID;
+            echo "Hallo Welt";
         }
     }
 ?>
