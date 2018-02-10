@@ -22,8 +22,8 @@
         if($LichtSensor >= $ObereSchwelle)
         {
         	HUE_SetState(15057 /*[Wohnen]*/, false);
-        	IPS_SetEventActive(23276 /*[Scripts\BeschattungAus\Bei Variablenänderung der Variable ""]*/, false); // Ereignis vom oberen Schwellwert deaktivieren
-        	IPS_SetEventActive(23361 /*[Scripts\Beschattung\Bei Variablenänderung der Variable ""]*/, true); // Ereignis vom unteren Schwellwert aktivieren
+        	IPS_SetEventActive(23276 /*[Scripts\BeschattungAus\Bei Variablenänderung der Variable ]*/, false); // Ereignis vom oberen Schwellwert deaktivieren
+        	IPS_SetEventActive(23361 /*[Scripts\Beschattung\Bei Variablenänderung der Variable ]*/, true); // Ereignis vom unteren Schwellwert aktivieren
         } ?>");
 
         }
