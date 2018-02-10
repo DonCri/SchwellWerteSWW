@@ -14,7 +14,7 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterPropertyInteger("Test", 0);
+        $variablenID = $this->RegisterVariableInteger("Status", "Test");
 
         }
 
