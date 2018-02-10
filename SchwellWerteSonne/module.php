@@ -23,9 +23,11 @@
         $this->RegisterScript("Skript", "Befehle");
       }
 
-      public function RequestAction($Ident = "LightValue") {
+      public function RequestAction($Ident, $Value) {
 
-        if($this->ReadPropertyInteger("LightValue") == $this->GetIDForIdent("VarOSW")) {
+        $Ident == $this->ReadPropertyInteger("LightValue")
+
+        if($Ident == $this->GetIDForIdent("VarOSW")) {
             IPS_RunScript($this->GetIDForIdent("Skript"));
           }
           }
