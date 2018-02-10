@@ -25,7 +25,7 @@
 
       public function RequestAction($Ident, $Value) {
 
-        $Ident == $this->ReadPropertyInteger("LightValue");
+        $Ident == $this->GetIDForIdent("LightValue");
 
         if($Ident == $this->GetIDForIdent("VarOSW")) {
             IPS_RunScript($this->GetIDForIdent("Skript"));
