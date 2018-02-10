@@ -18,9 +18,6 @@
 
         }
 
-        public function SchwellWerteSonneSoll() {
-            echo "Halle Welt";
-        }
     }
 
 ?>
