@@ -16,7 +16,7 @@
 
         $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
-        $this->RegisterScript("oswScript", "Oberer SchwellWert", "<? $LichtSensor = GetValue(); $ObereSchwelle = GetValue(); if($LichtSensor >= $ObereSchwelle){HUE_SetState(, false); IPS_SetEventActive(, false); IPS_SetEventActive( , true); } ?>");
+        $this->RegisterScript("oswScript", "Oberer SchwellWert", "<? "$LichtSensor" = GetValue(); "$ObereSchwelle" = GetValue(); if("$LichtSensor" >= "$ObereSchwelle"){HUE_SetState(, false); IPS_SetEventActive(, false); IPS_SetEventActive( , true); } ?>");
 
 
         }
