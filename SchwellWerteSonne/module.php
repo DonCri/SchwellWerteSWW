@@ -28,10 +28,9 @@
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
 
-  
 
     if($this->ReadPropertyInteger("LightValue") == $this->ReadPropertyInteger("upperValue")) {
-        IPS_RunScript("Skript");
+        IPS_RunScript($this->GetIDForIdent("Skript"));
     }
     }
 
