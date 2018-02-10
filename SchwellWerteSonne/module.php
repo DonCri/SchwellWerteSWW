@@ -14,12 +14,23 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterPropertyInteger("osw", 0);
-        $this->RegisterPropertyInteger("usw", 0);
 
-        $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
-        $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
+        $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
+        $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
+        $script = $this->RegisterScript("Skript", "Befehle");
       }
+
+      public function ApplyChanges() {
+
+    // Diese Zeile nicht löschen
+    parent::ApplyChanges();
+
+    if($this->ReadPropertyInteger("osw") == 10) {
+        RunScript($script);
+    }
+
+
+}
 
     }
 
