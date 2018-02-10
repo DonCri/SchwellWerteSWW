@@ -14,7 +14,7 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterPropertyInteger("GatewayMode", 0);
+        $this->RegisterPropertyInteger("Test", 0);
 
         }
 
