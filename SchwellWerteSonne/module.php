@@ -23,7 +23,7 @@
         $this->RegisterScript("Skript", "Befehle");
       }
 
-      public function SchwellWerteSonneSoll() {
+      public function ApplyChanges() {
 
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
