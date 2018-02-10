@@ -16,13 +16,8 @@
 
         $this->RegisterVariableInteger("osw", "Oberer Schwellwert");
         $this->RegisterVariableInteger("usw", "Unterer Schwellwert");
-        $this->RegisterScript("oswScript", "Oberer SchwellWert", "<?  ?>");
+        $this->RegisterScript("oswScript", "Oberer SchwellWert", "<? $LichtSensor = GetValue(56901 /*[DominoSwiss SWW SOL\Light]*/);$ObereSchwelle = GetValue(22504 /*[Test Variablen\Schwellwerte Sonne\Unteren Wert]*/);if($LichtSensor >= $ObereSchwelle){HUE_SetState(15057 /*[Wohnen]*/, false);IPS_SetEventActive(23276 /*[Scripts\BeschattungAus\Bei Variablenänderung der Variable ""]*/, false); /* Ereignis vom oberen Schwellwert deaktivieren */IPS_SetEventActive(23361 /*[Scripts\Beschattung\Bei Variablenänderung der Variable ""]*/, true); /* Ereignis vom unterenSchwellwert aktivieren */} ?>");
 
-        $SchwelleOben = GetValue($this->GetIDForIdent("osw"));
-
-        if($SchwelleOben == 10) {
-          IPS_RunScript($this->GetIDForIdent("oswScript"));
-        }
 
         }
 
