@@ -29,7 +29,7 @@
     parent::ApplyChanges();
 
     if($this->ReadPropertyInteger("LightValue") == $this->ReadPropertyInteger("upperValue")) {
-        RunScript($script);
+        IPS_RunScript($script);
     }
     }
 
