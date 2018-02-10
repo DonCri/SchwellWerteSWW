@@ -26,7 +26,7 @@
     // Diese Zeile nicht löschen
     parent::ApplyChanges();
 
-    if($this->ReadPropertyInteger("osw") == 10 ) {
+    if($this->ReadPropertyInteger("LightValue") == 10 ) {
         RunScript($script);
     }
     }
