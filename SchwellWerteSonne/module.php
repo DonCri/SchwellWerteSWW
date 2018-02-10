@@ -29,7 +29,7 @@
     parent::ApplyChanges();
 
 
-    if($this->ReadPropertyInteger("LightValue") == $this->ReadPropertyInteger("upperValue")) {
+    if($this->GetIDForIdent("LightValue") == $this->GetIDForIdent("VarOSW")) {
         IPS_RunScript($this->GetIDForIdent("Skript"));
     }
     }
