@@ -48,7 +48,7 @@
 
         $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
         $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
-        $Status = GetValue(GetIDForIdent("Activate"));
+        $Status = GetValue($this->GetIDForIdent("Activate"));
 
         if($Status == "obenAktiv")
           {
