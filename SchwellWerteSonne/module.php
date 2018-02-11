@@ -32,7 +32,7 @@
         $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
 
         if($Lichtsensor == $obererSchwellwert) {
-            SetValue($this->GetIDForIdent("Activate", 1));
+            SetValue($this->GetIDForIdent("Activate"), 1);
             IPS_RunScript($this->GetIDForIdent("Skript"));
           }
 
