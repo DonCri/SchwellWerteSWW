@@ -40,20 +40,20 @@
                     //Neuen Wert in die Statusvariable schreiben
                     SetValue($this->GetIDForIdent($Ident), $Value);
                     break;
-    }
+                  }
 
-}
+    }
 
       public function SchwellWertOben() {
 
         $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
-        $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
+        $oberenSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
         $Status = GetValue($this->GetIDForIdent("Activate"));
 
         if($Status <> "obenAktiv")
           {
 
-            if($Lichtsensor >= $obererSchwellwert)
+            if($Lichtsensor >= $oberenSchwellwert)
             {
               SetValue($this->GetIDForIdent("Activate"), "obenAktiv");
               IPS_RunScript($this->GetIDForIdent("ScriptUpper"));
@@ -61,6 +61,24 @@
           }
 
         }
-      }
+
+        public function SchwellWertUnten() {
+
+          $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
+          $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValue"));
+          $Status = GetValue($this->GetIDForIdent("Activate"));
+
+          if($Status <> "untenAktiv")
+            {
+
+              if($Lichtsensor >= $unterenSchwellwert)
+              {
+                SetValue($this->GetIDForIdent("Activate"), "unten Aktiv");
+              }
+            }
+
+          }
+
+}
 
 ?>
