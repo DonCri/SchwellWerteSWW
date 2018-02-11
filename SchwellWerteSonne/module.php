@@ -23,8 +23,25 @@
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("upperValue", 0);
         $this->RegisterPropertyInteger("lowerValue", 0);
+        $this->EnableAction("upperValue");
+        $this->EnableAction("lowerValue");
 
       }
+
+      public function RequestAction($Ident, $Value) {
+
+    switch($Ident) {
+        case "upperValue":
+            //Neuen Wert in die Statusvariable schreiben
+            SetValue($this->GetIDForIdent($Ident), $Value);
+            break;
+            case "lowerValue":
+                //Neuen Wert in die Statusvariable schreiben
+                SetValue($this->GetIDForIdent($Ident), $Value);
+                break;
+    }
+
+}
 
       public function Vergleich() {
 
