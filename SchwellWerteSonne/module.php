@@ -17,7 +17,7 @@
 
         $this->RegisterVariableString("upperValue", "Oberer Schwellwert");
         $this->RegisterVariableString("lowerValue", "Unterer Schwellwert");
-        $this->RegisterVariableString("Activate", "Aktiver Schwellwer");
+        $this->RegisterVariableString("Activate", "Aktiver Schwellwert");
 
 
         $this->RegisterPropertyInteger("LightValue", 0);
