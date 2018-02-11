@@ -22,6 +22,8 @@
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyString("upperValue", 0);
         $this->RegisterPropertyString("lowerValue", 0);
+        $this->RegisterPropertyScript("ScriptUpper", 0);
+        $this->RegisterPropertyScript("ScriptLower", 0);
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
 
