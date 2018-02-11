@@ -23,7 +23,7 @@
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyString("upperValue", 0);
         $this->RegisterPropertyString("lowerValue", 0);
-        $this->RegisterPropertyString("Activate", "");
+        $this->RegisterPropertyString("Activate", 'Nichts Aktiv');
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
 
@@ -50,7 +50,7 @@
         $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
         $Status = GetValue($this->GetIDForIdent("Activate"));
 
-        if($Status == "obenAktiv")
+        if($Status <> "obenAktiv")
           {
 
             if($Lichtsensor >= $obererSchwellwert)
