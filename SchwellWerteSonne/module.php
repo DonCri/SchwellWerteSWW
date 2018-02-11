@@ -22,14 +22,15 @@
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("upperValue", 0);
         $this->RegisterPropertyInteger("lowerValue", 0);
+      }
 
-        $Ident = $this->ReadPropertyInteger("LightValue");
+      public function Vergleich() {
 
-        if($Ident == $this->ReadPropertyInteger("upperValue")) {
+
+        if($this->GetIDForIdent("LightValue") == $this->GetIDForIdent("upperValue")) {
             IPS_RunScript($this->GetIDForIdent("Skript"));
 
           }
-      }
 
         }
 
