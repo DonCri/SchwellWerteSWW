@@ -1,22 +1,22 @@
 # Modul zum vergleichen der Schwellwerte für die Sonnenfunktion.
 
-# Version
+### Version
 1.0
 
-## Was wird hinzugefügt?
+### Was wird hinzugefügt?
 
 Beim einfügen wird ein Modul mit 3 Variablen hinzugefügt.
   * Variable 1 = Aktiver Schwellwert
   * Variable 2 = oberer Schwellwert
   * Variable 3 = unterer Schwellwert
 
-## Beschreibung der einzelne Variable
+### Beschreibung der einzelne Variable
 
 Variable Aktiver Schwellwert: Wird der ein Wert "oben" oder "unten" geschrieben.
 Variable oberer Schwellwert: Kann im WebFront der obere Wert (integer) eingegeben werden.
 Variable unterer Schwellwert: Kann im WebFront der untere Wert (integer) eingegeben werden.
 
-## Funktionsweise
+### Funktionsweise
 
 Beim überschreiten des oberen Wert, wird in der "Aktiver Schwellwert" Variable den Wert "oben" geschrieben.
 Beim unterschreiten des unteren Wert, wird in der "Aktiver Schwellwert" Variable den Wert "unten" geschrieben.
