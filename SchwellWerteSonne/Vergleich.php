@@ -2,6 +2,8 @@
 
 class Vergleich extends IPSModule {
 
+function public RequestAction() {
+
   $this->RegisterPropertyInteger("LightValue", 0);
   $this->RegisterPropertyInteger("upperValue", 0);
   $this->RegisterPropertyInteger("lowerValue", 0);
@@ -13,7 +15,7 @@ class Vergleich extends IPSModule {
         IPS_RunScript($this->GetIDForIdent("Skript"));
 
       }
-
+}
 
 }
 
