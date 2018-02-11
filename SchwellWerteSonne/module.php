@@ -26,7 +26,10 @@
 
       public function Vergleich() {
 
-        if($this->ReadPropertyInteger("LightValue") == $this->GetIDForIdent("upperValue")) {
+        $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
+        $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"))
+
+        if($Lichtsensor == $obererSchwellwert) {
             IPS_RunScript($this->GetIDForIdent("Skript"));
 
           }
