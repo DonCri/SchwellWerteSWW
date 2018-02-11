@@ -23,6 +23,7 @@
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyString("upperValue", 0);
         $this->RegisterPropertyString("lowerValue", 0);
+        $this->RegisterPropertyString("Activate", "");
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
 
