@@ -50,7 +50,7 @@
         $oberenSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
         $Status = GetValue($this->GetIDForIdent("Activate"));
 
-        if($Status <> "obenAktiv")
+        if($Status <> "oben")
           {
 
             if($Lichtsensor >= $oberenSchwellwert)
@@ -68,7 +68,7 @@
           $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValue"));
           $Status = GetValue($this->GetIDForIdent("Activate"));
 
-          if($Status <> "untenAktiv")
+          if($Status <> "unten")
             {
 
               if($Lichtsensor <= $unterenSchwellwert)
