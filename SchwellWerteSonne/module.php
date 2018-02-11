@@ -71,7 +71,7 @@
           if($Status <> "untenAktiv")
             {
 
-              if($Lichtsensor >= $unterenSchwellwert)
+              if($Lichtsensor <= $unterenSchwellwert)
               {
                 SetValue($this->GetIDForIdent("Activate"), "unten Aktiv");
               }
