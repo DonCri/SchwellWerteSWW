@@ -2,6 +2,7 @@
     "elements":
     [
         { "type": "SelectVariable", "name": "LightValue", "caption": "Lichtsensor" },
+        { "type": "SelectVariable", "name": "RainValue", "caption": "Regensensor" },
         { "type": "SelectVariable", "name": "upperValue", "caption": "oberer Schwellwert" },
         { "type": "SelectVariable", "name": "lowerValue", "caption": "unterer Schwellwert" },
 
