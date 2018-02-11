@@ -24,7 +24,7 @@
         $this->RegisterPropertyString("lowerValue", 0);
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
-        $this->RegisterScript("ScriptUpper", "Befehle oben");
+        $this->RegisterPropertyString("ScriptUpper");
 
 
       }
