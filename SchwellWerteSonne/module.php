@@ -19,6 +19,10 @@ include_once __DIR__ . '/../SchwellWerteSonne/Vergleich.php';
         $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
         $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
         $this->RegisterScript("Skript", "Befehle");
+
+        $this->RegisterPropertyInteger("LightValue", 0);
+        $this->RegisterPropertyInteger("upperValue", 0);
+        $this->RegisterPropertyInteger("lowerValue", 0);
       }
 
         }
