@@ -15,10 +15,10 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableInteger("upperValue", "Oberer Schwellwert");
-        $this->RegisterVariableInteger("lowerValue", "Unterer Schwellwert");
+        $this->RegisterVariableString("upperValue", "Oberer Schwellwert");
+        $this->RegisterVariableString("lowerValue", "Unterer Schwellwert");
         $this->RegisterVariableInteger("Activate", "AktivesEreignis");
-        $this->RegisterScript("Skript", "Befehle");
+
 
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("upperValue", 0);
@@ -27,6 +27,8 @@
       }
 
       public function Vergleich() {
+
+        $this->RegisterScript("Skript", "Befehle");
 
         $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
         $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
