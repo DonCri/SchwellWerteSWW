@@ -1,6 +1,6 @@
 <?
     // Klassendefinition
-    class SchwellWerteSonneSoll extends IPSModule {
+    class SchwellWerteSonneSoll extends Vergleich {
         /**
         * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
         * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
@@ -14,24 +14,11 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterPropertyInteger("LightValue", 0);
-        $this->RegisterPropertyInteger("upperValue", 0);
-        $this->RegisterPropertyInteger("lowerValue", 0);
-
         $this->RegisterVariableInteger("VarOSW", "Oberer Schwellwert");
         $this->RegisterVariableInteger("VarUSW", "Unterer Schwellwert");
         $this->RegisterScript("Skript", "Befehle");
       }
 
-      public function RequestAction($Ident, $Value) {
-
-        $Ident = $this->GetIDForIdent("LightValue");
-
-        if($Ident == $this->GetIDForIdent("VarOSW")) {
-            IPS_RunScript($this->GetIDForIdent("Skript"));
-          }
-          }
-
-      }
+        }
 
 ?>
