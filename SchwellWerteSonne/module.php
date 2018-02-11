@@ -24,8 +24,8 @@
         $this->RegisterPropertyString("lowerValue", 0);
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
-        $scriptID1 = $this->RegisterScript("ScriptUpper", "Mein TestSkript1");
-        $scriptID2 = $this->RegisterScript("ScriptLower", "Mein TestSkript2");
+        $scriptID1 = $this->RegisterScript("ScriptUpper");
+        
 
 
 
