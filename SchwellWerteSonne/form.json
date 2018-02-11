@@ -4,5 +4,7 @@
         { "type": "SelectVariable", "name": "LightValue", "caption": "Lichtsensor" },
         { "type": "SelectVariable", "name": "upperValue", "caption": "oberer Schwellwert" },
         { "type": "SelectVariable", "name": "lowerValue", "caption": "unterer Schwellwert" },
+        { "type": "SelectScript", "name": "ScriptUpper", "caption": "Befehle für den oberen Schwellwert (Skript)" },
+        { "type": "SelectScript", "name": "ScriptLower", "caption": "Befehle für den unteren Schwellwert (Skript)" },
     ]
 }
