@@ -23,7 +23,7 @@
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyString("upperValue", 0);
         $this->RegisterPropertyString("lowerValue", 0);
-        $this->RegisterPropertyString("Activate", 'Nichts Aktiv');
+        $this->RegisterPropertyString("Activate", "Nichts Aktiv");
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
 
@@ -55,7 +55,7 @@
 
             if($Lichtsensor >= $obererSchwellwert)
             {
-              SetValue($this->GetIDForIdent("Activate"), 'oben Aktiv');
+              SetValue($this->GetIDForIdent("Activate"), "oben Aktiv");
               IPS_RunScript($this->GetIDForIdent("ScriptUpper"));
             }
           }
