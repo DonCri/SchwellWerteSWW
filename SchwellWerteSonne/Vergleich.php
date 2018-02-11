@@ -2,7 +2,7 @@
 
 class Vergleich extends IPSModule {
 
-function public RequestAction() {
+public function RequestAction() {
 
   $this->RegisterPropertyInteger("LightValue", 0);
   $this->RegisterPropertyInteger("upperValue", 0);
