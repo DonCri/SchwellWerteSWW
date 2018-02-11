@@ -4,9 +4,9 @@ class Vergleich extends IPSModule {
 
 public function ApplyChanges() {
 
-    $Ident = $this->GetIDForIdent("LightValue");
+    $Ident = $this->ReadPropertyInteger("LightValue");
 
-    if($Ident == $this->GetIDForIdent("VarOSW")) {
+    if($Ident == $this->ReadPropertyInteger("upperValue")) {
         IPS_RunScript($this->GetIDForIdent("Skript"));
 
       }
