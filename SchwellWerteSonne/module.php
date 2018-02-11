@@ -56,7 +56,6 @@
             if($Lichtsensor >= $oberenSchwellwert)
             {
               SetValue($this->GetIDForIdent("Activate"), "oben");
-              IPS_RunScript($this->GetIDForIdent("ScriptUpper"));
             }
           }
 
