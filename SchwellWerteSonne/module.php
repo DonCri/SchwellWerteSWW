@@ -17,17 +17,14 @@
 
         $this->RegisterVariableString("upperValue", "Oberer Schwellwert");
         $this->RegisterVariableString("lowerValue", "Unterer Schwellwert");
-        $this->RegisterVariableInteger("Activate", "AktivesEreignis");
+        $this->RegisterVariableString("Activate", "AktivesEreignis");
+
 
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyString("upperValue", 0);
         $this->RegisterPropertyString("lowerValue", 0);
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
-        $scriptID = $this->RegisterScript("ScriptUpper", "ScriptUpper");
-
-
-
 
       }
 
@@ -46,14 +43,20 @@
 
 }
 
-      public function Vergleich() {
+      public function SchwellWertOben() {
 
         $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
         $obererSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
+        $Status = GetValue(GetIDForIdent("Activate"));
 
-        if($Lichtsensor == $obererSchwellwert) {
-            SetValue($this->GetIDForIdent("Activate"), 1);
-            IPS_RunScript($this->GetIDForIdent("ScriptUpper"));
+        if($Status == "obenAktiv")
+          {
+
+            if($Lichtsensor >= $obererSchwellwert)
+            {
+              SetValue($this->GetIDForIdent("Activate"), "oben Aktiv");
+              IPS_RunScript($this->GetIDForIdent("ScriptUpper"));
+            }
           }
 
         }
