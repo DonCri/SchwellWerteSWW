@@ -1,4 +1,6 @@
 <?
+include_once __DIR__ . '/../SchwellWerteSonne/Vergleich.php';
+
     // Klassendefinition
     class SchwellWerteSonneSoll extends Vergleich {
         /**
