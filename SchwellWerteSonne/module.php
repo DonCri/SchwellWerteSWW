@@ -25,7 +25,7 @@
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
         $scriptID1 = $this->RegisterScript("ScriptUpper", "Oberen Wert");
-        $scriptID2 = $this->RegisterScript("ScriptLower", "Unteren Wert");
+        
 
       }
 
