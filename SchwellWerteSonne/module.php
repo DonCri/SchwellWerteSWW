@@ -24,8 +24,8 @@
         $this->RegisterPropertyString("lowerValue", 0);
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
-        $scriptID1 = $this->RegisterScript("ScriptUpper", "Oberen Wert");
-        
+        $this->RegisterScript("ScriptUpper");
+
 
       }
 
@@ -51,7 +51,7 @@
 
         if($Lichtsensor == $obererSchwellwert) {
             SetValue($this->GetIDForIdent("Activate"), 1);
-            IPS_RunScript($scriptID1);
+            IPS_RunScript($this->GetIDForIdent("ScriptUpper"));
           }
 
         }
