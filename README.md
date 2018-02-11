@@ -30,5 +30,6 @@ Für den oberen Schwellwert zu aktivieren muss der Regensensor auf "false" geste
 
 Einstellmöglichkeiten:
   * Lichtsensor: Variable des Lichtsensor welcher für den Vergleich notwendig ist.
+  * Regensensor: Variable des Regensensor welcher überprüft werden soll.
   * oberen Schwellwert: Variable wo der obere Schwellwert eingegeben wird.
   * untere Schwellwert: Variable wo der untere Schwellwert eingegeben wird.
