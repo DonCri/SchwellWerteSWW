@@ -26,12 +26,12 @@
 
       public function Vergleich() {
 
-
         if($this->GetIDForIdent("LightValue") == $this->GetIDForIdent("upperValue")) {
             IPS_RunScript($this->GetIDForIdent("Skript"));
 
           }
 
         }
+      }
 
 ?>
