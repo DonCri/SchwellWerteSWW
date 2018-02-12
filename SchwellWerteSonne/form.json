@@ -6,5 +6,7 @@
         { "type": "SelectVariable", "name": "RainValue", "caption": "Regensensor" },
         { "type": "SelectEvent", "name": "upperEvent", "caption": "Oberen Schwellwert" },
         { "type": "SelectEvent", "name": "lowerEvent", "caption": "Unteren Schwellwert" },
+        { "type": "Label", "label": ""},
+        { "type": "Label", "label": "Wind:"},
     ]
 }
