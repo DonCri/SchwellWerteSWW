@@ -93,14 +93,14 @@
           if($Status <> "oben")
             {
 
-              if($Lichtsensor >= $oberenSchwellwert)
+              if($Windsensor >= $oberenSchwellwert)
               {
                 SetValue($this->GetIDForIdent("ActivateWind"), "oben");
               }
             }           elseif($Status <> "unten")
                         {
 
-                          if($Lichtsensor <= $unterenSchwellwert)
+                          if($Windsensor <= $unterenSchwellwert)
                           {
                             SetValue($this->GetIDForIdent("ActivateWind"), "unten");
                           }
