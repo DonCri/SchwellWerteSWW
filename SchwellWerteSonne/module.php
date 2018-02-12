@@ -15,7 +15,7 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableBoolean("activateSun", "Beschattung An", "", "0")
+        $this->RegisterVariableBoolean("activateSun", "Beschattung An", "", "0");
         $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", "", "1");
         $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", "", "2");
         $this->RegisterVariableString("stateSun", "Aktiver Schwellwert Sonne", "", "3");
