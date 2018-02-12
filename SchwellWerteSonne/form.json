@@ -5,11 +5,5 @@
         { "type": "SelectVariable", "name": "RainValue", "caption": "Regensensor" },
         { "type": "SelectEvent", "name": "upperEvent", "caption": "Oberen Schwellwert" },
         { "type": "SelectEvent", "name": "lowerEvent", "caption": "Unteren Schwellwert" },
-        
-                { "label": "SMS", "value": 0 },
-                { "label": "Combi-SMS", "value": 1 },
-                { "label": "MMS", "value": 2 }
-
-
     ]
 }
