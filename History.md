@@ -9,5 +9,7 @@
 ### Version 1.1
   * Oberen und unteren Schwellwert in eine function
   * Einfügen von Boolean-Variable für Ein- und Ausschalten der Beschttung
-  * Eingabeformular: Auswahl für zwei Beschattungsereignise (oben und unteren Schwellwert)
   * Eingabeformular: Auswahl für Schwellwert Variablen entfernt
+  * Function für Wind eingefügt
+  * Einfügen von drei String-Variablen: Oberen und unteren Schwellwert Wind, Schwellwert Status Wind
+  * Eingabeformular: Auswahl für Windsensor  
