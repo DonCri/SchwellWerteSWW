@@ -15,13 +15,14 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", "", "0");
-        $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", "", "1");
-        $this->RegisterVariableString("ActivateSun", "Aktiver Schwellwert Sonne", "", "2");
+        $this->RegisterVariableBoolean("activateSun", "Beschattung An", "", "0")
+        $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", "", "1");
+        $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", "", "2");
+        $this->RegisterVariableString("stateSun", "Aktiver Schwellwert Sonne", "", "3");
 
-        $this->RegisterVariableString("upperValueWind", "Oberer Schwellwert Wind", "", "3");
-        $this->RegisterVariableString("lowerValueWind", "Unterer Schwellwert Wind", "", "4");
-        $this->RegisterVariableString("ActivateWind", "Aktiver Schwellwert Wind", "", "5");
+        $this->RegisterVariableString("upperValueWind", "Oberer Schwellwert Wind", "", "4");
+        $this->RegisterVariableString("lowerValueWind", "Unterer Schwellwert Wind", "", "5");
+        $this->RegisterVariableString("stateWind", "Aktiver Schwellwert Wind", "", "6");
 
 
         $this->RegisterPropertyInteger("LightValue", 0);
@@ -64,45 +65,51 @@
         $Regensensor = GetValue($this->ReadPropertyInteger("RainValue"));
         $oberenSchwellwert = GetValue($this->GetIDForIdent("upperValueSun"));
         $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValueSun"));
-        $Status = GetValue($this->GetIDForIdent("ActivateSun"));
+        $Status = GetValue($this->GetIDForIdent("stateSun"));
 
         if($Status <> "oben")
           {
 
             if($Lichtsensor >= $oberenSchwellwert && $Regensensor == false)
             {
-              SetValue($this->GetIDForIdent("ActivateSun"), "oben");
+              SetValue($this->GetIDForIdent("stateSun"), "oben");
             }
-          }           elseif($Status <> "unten")
+          } elseif($Status <> "unten")
                       {
 
                         if($Lichtsensor <= $unterenSchwellwert)
                         {
-                          SetValue($this->GetIDForIdent("ActivateSun"), "unten");
+                          SetValue($this->GetIDForIdent("stateSun"), "unten");
                         }
                       }
 
         }
 
+        public function BeschattungAktiviere() {
+
+          
+        }
+
         public function Wind() {
+
           $Windsensor = GetValue($this->ReadPropertyInteger("WindValue"));
           $oberenSchwellwert = GetValue($this->GetIDForIdent("upperValueWind"));
           $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValueWind"));
-          $Status = GetValue($this->GetIDForIdent("ActivateWind"));
+          $Status = GetValue($this->GetIDForIdent("stateWind"));
 
           if($Status <> "oben")
             {
 
               if($Windsensor >= $oberenSchwellwert)
               {
-                SetValue($this->GetIDForIdent("ActivateWind"), "oben");
+                SetValue($this->GetIDForIdent("stateWind"), "oben");
               }
-            }           elseif($Status <> "unten")
+            } elseif($Status <> "unten")
                         {
 
                           if($Windsensor <= $unterenSchwellwert)
                           {
-                            SetValue($this->GetIDForIdent("ActivateWind"), "unten");
+                            SetValue($this->GetIDForIdent("stateWind"), "unten");
                           }
                         }
           }
