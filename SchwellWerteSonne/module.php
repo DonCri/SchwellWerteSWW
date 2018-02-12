@@ -15,13 +15,13 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert");
-        $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert");
-        $this->RegisterVariableString("ActivateSun", "Aktiver Schwellwert");
+        $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", 0);
+        $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", 1);
+        $this->RegisterVariableString("ActivateSun", "Aktiver Schwellwert Sonne", 2);
 
-        $this->RegisterVariableString("upperValueWind", "Oberer Schwellwert");
-        $this->RegisterVariableString("lowerValueWind", "Unterer Schwellwert");
-        $this->RegisterVariableString("ActivateWind", "Aktiver Schwellwert");
+        $this->RegisterVariableString("upperValueWind", "Oberer Schwellwert Wind", 3);
+        $this->RegisterVariableString("lowerValueWind", "Unterer Schwellwert Wind", 4);
+        $this->RegisterVariableString("ActivateWind", "Aktiver Schwellwert Wind", 5);
 
 
         $this->RegisterPropertyInteger("LightValue", 0);
