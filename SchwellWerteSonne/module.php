@@ -33,6 +33,7 @@
         $this->RegisterPropertyInteger("WindValue", 0);
         $this->EnableAction("upperValueWind");
         $this->EnableAction("lowerValueWind");
+        $this->EnableAction("activateSun");
 
       }
 
@@ -52,6 +53,10 @@
                       SetValue($this->GetIDForIdent($Ident), $Value);
                   break;
                   case "lowerValueWind":
+                      //Neuen Wert in die Statusvariable schreiben
+                      SetValue($this->GetIDForIdent($Ident), $Value);
+                  break;
+                  case "activateSun":
                       //Neuen Wert in die Statusvariable schreiben
                       SetValue($this->GetIDForIdent($Ident), $Value);
                   break;
@@ -87,7 +92,7 @@
 
         public function BeschattungAktiviere() {
 
-          
+
         }
 
         public function Wind() {
