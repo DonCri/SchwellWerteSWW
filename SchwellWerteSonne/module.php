@@ -15,7 +15,6 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableBoolean("activateSun", "Beschattung An", "", "0");
         $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", "", "1");
         $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", "", "2");
         $this->RegisterVariableString("stateSun", "Aktiver Schwellwert Sonne", "", "3");
@@ -33,7 +32,6 @@
         $this->RegisterPropertyInteger("WindValue", 0);
         $this->EnableAction("upperValueWind");
         $this->EnableAction("lowerValueWind");
-        $this->EnableAction("activateSun");
 
       }
 
@@ -53,10 +51,6 @@
                       SetValue($this->GetIDForIdent($Ident), $Value);
                   break;
                   case "lowerValueWind":
-                      //Neuen Wert in die Statusvariable schreiben
-                      SetValue($this->GetIDForIdent($Ident), $Value);
-                  break;
-                  case "activateSun":
                       //Neuen Wert in die Statusvariable schreiben
                       SetValue($this->GetIDForIdent($Ident), $Value);
                   break;
@@ -87,11 +81,6 @@
                           SetValue($this->GetIDForIdent("stateSun"), "unten");
                         }
                       }
-
-        }
-
-        public function BeschattungAktiviere() {
-
 
         }
 
