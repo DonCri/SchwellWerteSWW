@@ -1,6 +1,7 @@
 {
     "elements":
     [
+        { "type": "label", "label": "Beschattung:"},
         { "type": "SelectVariable", "name": "LightValue", "caption": "Lichtsensor" },
         { "type": "SelectVariable", "name": "RainValue", "caption": "Regensensor" },
         { "type": "SelectEvent", "name": "upperEvent", "caption": "Oberen Schwellwert" },
