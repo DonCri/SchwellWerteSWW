@@ -3,9 +3,13 @@
     [
         { "type": "SelectVariable", "name": "LightValue", "caption": "Lichtsensor" },
         { "type": "SelectVariable", "name": "RainValue", "caption": "Regensensor" },
-        { "type": "SelectVariable", "name": "upperValue", "caption": "oberer Schwellwert" },
-        { "type": "SelectVariable", "name": "lowerValue", "caption": "unterer Schwellwert" },
-
+        { "type": "SelectEvent", "name": "upperEvent", "caption": "Oberen Schwellwert" },
+        { "type": "SelectEvent", "name": "lowerEvent", "caption": "Unteren Schwellwert" },
+        "options": [
+                { "label": "SMS", "value": 0 },
+                { "label": "Combi-SMS", "value": 1 },
+                { "label": "MMS", "value": 2 }
+              ]
 
     ]
 }

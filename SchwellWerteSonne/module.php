@@ -22,8 +22,6 @@
 
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("RainValue", 0);
-        $this->RegisterPropertyString("upperValue", 0);
-        $this->RegisterPropertyString("lowerValue", 0);
         $this->RegisterPropertyString("Activate", "NichtsAktiv");
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
@@ -45,11 +43,12 @@
 
     }
 
-      public function SchwellWertOben() {
+      public function Beschattung() {
 
         $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
         $Regensensor = GetValue($this->ReadPropertyInteger("RainValue"));
         $oberenSchwellwert = GetValue($this->GetIDForIdent("upperValue"));
+        $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValue"));
         $Status = GetValue($this->GetIDForIdent("Activate"));
 
         if($Status <> "oben")
@@ -59,24 +58,18 @@
             {
               SetValue($this->GetIDForIdent("Activate"), "oben");
             }
-          }
+          }           elseif($Status <> "unten")
+                      {
+
+                        if($Lichtsensor <= $unterenSchwellwert)
+                        {
+                          SetValue($this->GetIDForIdent("Activate"), "unten");
+                        }
+                      }
 
         }
 
-        public function SchwellWertUnten() {
-
-          $Lichtsensor = GetValue($this->ReadPropertyInteger("LightValue"));
-          $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValue"));
-          $Status = GetValue($this->GetIDForIdent("Activate"));
-
-          if($Status <> "unten")
-            {
-
-              if($Lichtsensor <= $unterenSchwellwert)
-              {
-                SetValue($this->GetIDForIdent("Activate"), "unten");
-              }
-            }
+        public function Wind() {
 
           }
 
