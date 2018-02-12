@@ -22,7 +22,6 @@
 
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("RainValue", 0);
-        $this->RegisterPropertyString("Activate", "NichtsAktiv");
         $this->EnableAction("upperValue");
         $this->EnableAction("lowerValue");
 
