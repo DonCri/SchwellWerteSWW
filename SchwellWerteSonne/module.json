@@ -1,11 +1,11 @@
 {
     "id": "X079cXKU5EeZCm3GZfWZRg",
-    "name": "SchwellWerteSonneSoll",
+    "name": "SchwellWerteSWW",
     "type": 3,
     "vendor": "BRELAG",
     "aliases":
         [
-            "SchwellWerteSonneSoll"
+            "SchwellWerteSWW"
         ],
     "parentRequirements": [],
     "childRequirements": [],
