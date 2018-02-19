@@ -18,16 +18,19 @@
         $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", "", "1");
         $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", "", "2");
         $this->RegisterVariableString("stateSun", "Aktiver Schwellwert Sonne", "", "3");
+        $this->RegisterVariableBoolean("StateChangeSun", "Beschattung aktivieren / deaktivieren", "BRELAG.Switch", "0");
 
         $this->RegisterVariableString("upperValueWind", "Oberer Schwellwert Wind", "", "4");
         $this->RegisterVariableString("lowerValueWind", "Unterer Schwellwert Wind", "", "5");
         $this->RegisterVariableString("stateWind", "Aktiver Schwellwert Wind", "", "6");
 
-
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("RainValue", 0);
+        $this->RegisterPropertyString("upperEventSun", "");
+        $this->RegisterPropertyString("lowerEventSun", "");
         $this->EnableAction("upperValueSun");
         $this->EnableAction("lowerValueSun");
+        $this->EnableAction("StateChangeSun");
 
         $this->RegisterPropertyInteger("WindValue", 0);
         $this->EnableAction("upperValueWind");
@@ -54,6 +57,11 @@
                       //Neuen Wert in die Statusvariable schreiben
                       SetValue($this->GetIDForIdent($Ident), $Value);
                   break;
+                  case "StateChangeSun":
+                      //Neuen Wert in die Statusvariable schreiben
+                      SetValue($this->GetIDForIdent($Ident), $Value);
+                      $this->BeschattungAktivDeaktiv();
+                  break;
                   }
 
     }
@@ -68,20 +76,32 @@
 
         if($Status <> "oben")
           {
-
             if($Lichtsensor >= $oberenSchwellwert && $Regensensor == false)
             {
               SetValue($this->GetIDForIdent("stateSun"), "oben");
             }
           } elseif($Status <> "unten")
-                      {
+              {
+                if($Lichtsensor <= $unterenSchwellwert)
+                  {
+                    SetValue($this->GetIDForIdent("stateSun"), "unten");
+                  }
+                }
 
-                        if($Lichtsensor <= $unterenSchwellwert)
-                        {
-                          SetValue($this->GetIDForIdent("stateSun"), "unten");
-                        }
-                      }
+        }
 
+        public function BeschattungAktivDeaktiv(){
+          $state = GetValue($this->GetIDForIdent("StateChangeSun"));
+          switch ($state) {
+            case true:
+                IPS_SetEventActive($this->ReadPropertyString("upperEventSun"), true);
+                IPS_SetEventActive($this->ReadPropertyString("lowerEventSun"), true);
+              break;
+            case false:
+              IPS_SetEventActive($this->ReadPropertyString("upperEventSun"), false);
+              IPS_SetEventActive($this->ReadPropertyString("lowerEventSun"), false);
+            break;
+          }
         }
 
         public function Wind() {
@@ -93,21 +113,21 @@
 
           if($Status <> "oben")
             {
-
               if($Windsensor >= $oberenSchwellwert)
               {
                 SetValue($this->GetIDForIdent("stateWind"), "oben");
               }
             } elseif($Status <> "unten")
-                        {
-
-                          if($Windsensor <= $unterenSchwellwert)
-                          {
-                            SetValue($this->GetIDForIdent("stateWind"), "unten");
-                          }
-                        }
+                {
+                  if($Windsensor <= $unterenSchwellwert)
+                    {
+                      SetValue($this->GetIDForIdent("stateWind"), "unten");
+                    }
+                  }
           }
 
 }
+
+
 
 ?>
