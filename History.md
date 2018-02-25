@@ -17,3 +17,6 @@
 ### Version 1.2
   * Boolean Variable für Ein und Ausschalten der Beschattungsereignisse
   * Statusvariable in integer Variable geändert (0 = "untere Schwellwert", 1 = "obere Schwellwert")
+
+### Version 1.3
+  * Funktion Beschattung Wiederholen eingefügt.
