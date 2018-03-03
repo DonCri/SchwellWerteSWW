@@ -1,8 +1,8 @@
 {
     "translations": {
         "de": {
-            "lower": "untere Schwellwert",
-            "upper": "obere Schwellwert"
+            "lower": "unteren Schwellwert",
+            "upper": "oberen Schwellwert"
         }
     }
 }
