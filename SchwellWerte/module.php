@@ -29,8 +29,8 @@
         $this->RegisterVariableInteger("stateSun", "Aktiver Schwellwert Sonne", "BRELAG.SollSWW", "3");
         $this->RegisterVariableBoolean("StateChangeSun", "Beschattung aktivieren / deaktivieren", "BRELAG.Switch", "0");
 
-        $this->RegisterVariableString("upperValueWind", "Oberer Schwellwert Wind", "", "4");
-        $this->RegisterVariableString("lowerValueWind", "Unterer Schwellwert Wind", "", "5");
+        $this->RegisterVariableString("upperValueWind", "Oberen Schwellwert Wind", "", "4");
+        $this->RegisterVariableString("lowerValueWind", "Unteren Schwellwert Wind", "", "5");
         $this->RegisterVariableInteger("stateWind", "Aktiver Schwellwert Wind", "BRELAG.SollSWW", "6");
 
         $this->RegisterPropertyInteger("LightValue", 0);
