@@ -24,8 +24,8 @@
     			IPS_SetVariableProfileAssociation("BRELAG.SollSWW", 1, $this->Translate("upper"), "", -1);
     		}
 
-        $this->RegisterVariableString("upperValueSun", "Oberer Schwellwert Sonne", "", "1");
-        $this->RegisterVariableString("lowerValueSun", "Unterer Schwellwert Sonne", "", "2");
+        $this->RegisterVariableString("upperValueSun", "Oberen Schwellwert Sonne", "", "1");
+        $this->RegisterVariableString("lowerValueSun", "Unteren Schwellwert Sonne", "", "2");
         $this->RegisterVariableInteger("stateSun", "Aktiver Schwellwert Sonne", "BRELAG.SollSWW", "3");
         $this->RegisterVariableBoolean("StateChangeSun", "Beschattung aktivieren / deaktivieren", "BRELAG.Switch", "0");
 
