@@ -24,6 +24,14 @@
     			IPS_SetVariableProfileAssociation("BRELAG.SollSWW", 1, $this->Translate("upper"), "", -1);
     		}
 
+        // Profil für Beschattung aktivieren / deaktivieren
+        if(!IPS_VariableProfileExists("BRELAG.Switch")) {
+    			IPS_CreateVariableProfile("BRELAG.Switch", 0);
+    			IPS_SetVariableProfileIcon("BRELAG.Switch", "Power");
+    			IPS_SetVariableProfileAssociation("BRELAG.Switch", 0, $this->Translate("Off"), "", -1);
+    			IPS_SetVariableProfileAssociation("BRELAG.Switch", 1, $this->Translate("On"), "", -1);
+    		}
+
         $this->RegisterVariableString("upperValueSun", "Oberen Schwellwert Sonne", "", "1");
         $this->RegisterVariableString("lowerValueSun", "Unteren Schwellwert Sonne", "", "2");
         $this->RegisterVariableInteger("stateSun", "Aktiver Schwellwert Sonne", "BRELAG.SollSWW", "3");
@@ -121,19 +129,16 @@
           $unterenSchwellwert = GetValue($this->GetIDForIdent("lowerValueSun"));
           $Status = GetValue($this->GetIDForIdent("stateSun"));
 
-          if($Status <> 1)
-            {
+
               if($Lichtsensor >= $oberenSchwellwert && $Regensensor == false)
               {
                 SetValue($this->GetIDForIdent("stateSun"), "1");
               }
-            } elseif($Status <> 0)
-                {
-                  if($Lichtsensor <= $unterenSchwellwert)
+                  elseif($Lichtsensor <= $unterenSchwellwert)
                     {
                       SetValue($this->GetIDForIdent("stateSun"), "0");
                     }
-                  }
+
 
           }
 
