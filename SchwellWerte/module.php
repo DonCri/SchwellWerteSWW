@@ -43,8 +43,8 @@
 
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("RainValue", 0);
-        $this->RegisterPropertyString("upperEventSun", "");
-        $this->RegisterPropertyString("lowerEventSun", "");
+        $this->RegisterPropertyInteger("upperEventSun", 0);
+        $this->RegisterPropertyInteger("lowerEventSun", 0);
         $this->EnableAction("upperValueSun");
         $this->EnableAction("lowerValueSun");
         $this->EnableAction("StateChangeSun");
