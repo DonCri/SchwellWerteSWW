@@ -43,8 +43,8 @@
 
         $this->RegisterPropertyInteger("LightValue", 0);
         $this->RegisterPropertyInteger("RainValue", 0);
-        $this->RegisterPropertyString("upperEventSun", "");
-        $this->RegisterPropertyString("lowerEventSun", "");
+        $this->RegisterPropertyInteger("upperEventSun", "");
+        $this->RegisterPropertyInteger("lowerEventSun", "");
         $this->EnableAction("upperValueSun");
         $this->EnableAction("lowerValueSun");
         $this->EnableAction("StateChangeSun");
@@ -111,12 +111,12 @@
           $state = GetValue($this->GetIDForIdent("StateChangeSun"));
           switch ($state) {
             case true:
-                IPS_SetEventActive($this->ReadPropertyString("upperEventSun"), true);
-                IPS_SetEventActive($this->ReadPropertyString("lowerEventSun"), true);
+                IPS_SetEventActive($this->ReadPropertyInteger("upperEventSun"), true);
+                IPS_SetEventActive($this->ReadPropertyInteger("lowerEventSun"), true);
               break;
             case false:
-              IPS_SetEventActive($this->ReadPropertyString("upperEventSun"), false);
-              IPS_SetEventActive($this->ReadPropertyString("lowerEventSun"), false);
+              IPS_SetEventActive($this->ReadPropertyInteger("upperEventSun"), false);
+              IPS_SetEventActive($this->ReadPropertyInteger("lowerEventSun"), false);
             break;
           }
         }
